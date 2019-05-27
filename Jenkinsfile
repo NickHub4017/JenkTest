@@ -6,5 +6,10 @@ pipeline {
         git(url: 'https://github.com/NickHub4017/JenkTest/', branch: 'develop')
       }
     }
+    stage('') {
+      steps {
+        sh 'yarn start'
+      }
+    }
   }
 }
