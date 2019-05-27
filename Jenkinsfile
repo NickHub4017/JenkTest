@@ -8,9 +8,11 @@ pipeline {
     }
     stage('run') {
       steps {
-        sh '''ls
-pwd
-yarn start'''
+        sh '''curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -y
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+apt-get update && apt-get install yarn
+'''
       }
     }
   }
