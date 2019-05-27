@@ -8,7 +8,8 @@ pipeline {
     }
     stage('run') {
       steps {
-        sh '''pwd
+        sh '''ls
+pwd
 yarn start'''
       }
     }
