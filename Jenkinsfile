@@ -8,12 +8,7 @@ pipeline {
     }
     stage('run') {
       steps {
-        sh '''apt-get install software-properties-common -y
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg |  apt-key add -y
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-
-apt-get update && apt-get install yarn
-'''
+        sh 'echo "LOL"'
       }
     }
   }
